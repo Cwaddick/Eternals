@@ -8,40 +8,34 @@ const etc = [
     {
       name: "Sersi",
       attributes: ["matter manipulation", "telepathy", "stage 1 immortality","transmuatation","enhanced physique"],
+      imgFile: 'sersi.png'
       
     },
     {
       name: "Thena",
       attributes: ["combat proficiency", "regeneration", "meta-physique","Weapon generation","Psionic resistance"],
+      imgFile: 'Thena.jpg'
       
     },
     {
       name: "Phastos",
       attributes: ["healing factor", "matter manipulation", "cosmic energy manipulation","technomancy","enhanced durability"],
+      imgFile: 'phas.jpg'
       
     },
     {
       name: "Druig",
       attributes: ["Telepathy", "mind control", "possession","Longevity", "immortality"],
+      imgFile: 'druig.jpg'
       
     }
   ];
 
 
-  function serch(attribute) {
+ const serch= function(attribute) {
     let indec=etc.find(character => character.attributes.includes(attribute));
     return indec
-    
-  }
+ }
   
   
-  let ask1 = document.getElementsByName("Character");
-  let ask=ask1.value
-  const yes = serch(ask);
   
-  if (yes) {
-    console.log("The character(s) with the attribute ",ask," is:",yes);
-  
-  } else {
-    console.log("No character found with the attribute", ask);
-  }
