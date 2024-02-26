@@ -1,1 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+</head>
+
+<body>
+<script>function findCharacterByAttribute(attribute) {
+  return eternalsCharacters.find(character => character.attributes.includes(attribute));
+}
+
+</script>
+const attributeToFind = "teleportation";
+const charactersWithAttribute = findCharacterByAttribute(attributeToFind);
+
+if (charactersWithAttribute) {
+  console.log(`The character(s) with the attribute "${attributeToFind}" is/are:`);
+  charactersWithAttribute.forEach(character => {
+    console.log(character.name);
+  });
+} else {
+  console.log(`No character found with the attribute "${attributeToFind}".`);
+}
+
+</body>
+</html>
 
