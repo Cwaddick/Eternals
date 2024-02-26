@@ -5,23 +5,20 @@
 </head>
 
 <body>
-<script>function findCharacterByAttribute(attribute) {
-  return eternalsCharacters.find(character => character.attributes.includes(attribute));
-}
-
+<script src="et.js">
 </script>
-const attributeToFind = "teleportation";
-const charactersWithAttribute = findCharacterByAttribute(attributeToFind);
+<h1>The Eternals</h1>
+<ul>
+    <li>Ikaris</li>
+    <li>Sersi</li>
+    <li>Thena</li>
+    <li>Phastos</li>
+    <li>Druig</li>
 
-if (charactersWithAttribute) {
-  console.log(`The character(s) with the attribute "${attributeToFind}" is/are:`);
-  charactersWithAttribute.forEach(character => {
-    console.log(character.name);
-  });
-} else {
-  console.log(`No character found with the attribute "${attributeToFind}".`);
-}
+</ul>
+
+<label for="char">What Character are you looking for?</label>
+<input type="text" id="char" name="Character">
 
 </body>
 </html>
-
