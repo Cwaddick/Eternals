@@ -1,1 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+</head>
 
+<body>
+<script src="et.js">
+</script>
+<h1>The Eternals</h1>
+<ul>
+    <li>Ikaris</li>
+    <li>Sersi</li>
+    <li>Thena</li>
+    <li>Phastos</li>
+    <li>Druig</li>
+
+</ul>
+
+
+
+<script> 
+    const search1= function() {
+    let ask1 = document.getElementById("char").value;
+    let characters=serch(ask1)
+
+
+    if (characters) {
+        const resultext = document.createElement("p")
+        resultext.innerText = ("Character with the attribute "+ask1+ " is "+ characters.name)
+        document.body.append(resultext) 
+
+
+      
+      const eternalpic = document.createElement("img");
+        eternalpic.src = characters.imgFile;
+        document.body.append(eternalpic)
+
+    } else {
+      console.log("No character found with the attribute")
+    }
+  }
+
+</script>
+
+<label for="char">What Character are you looking for?</label>
+<input type="text" id="char" name="Character">
+<button onclick="search1()">Search</button>
+<div id="result"></div>
+
+
+
+</body>
+</html>
